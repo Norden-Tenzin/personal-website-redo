@@ -1,0 +1,29 @@
+@import "./helper.scss";
+
+.policy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .policy-title {
+    padding: 4rem 40px 0px 40px;
+    font-family: "Dm Sans";
+    font-weight: 800;
+    font-size: 7rem;
+  }
+  .policy-container {
+    margin-top: 40px;
+    width: 700px;
+    background-color: $secondary-color;
+    padding: 40px;
+    border-radius: 20px;
+    color: $tertiary-color;
+  }
+  @media screen and (max-width: 700px) {
+    .policy-title {
+      font-size: 5rem;
+    }
+    .policy-container {
+      width: 100%
+    }
+  }
+}

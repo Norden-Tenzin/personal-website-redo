@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { eToM, mToE } from "../helpers/morse";
 import { useDraggable } from "@neodrag/react";
 import { IoLogoLinkedin, IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
@@ -8,26 +8,16 @@ import "swiper/swiper.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "98.css";
 import "../styles/stylesheet.scss";
-// assets imports
-import qr from "../assets/qr-code.png";
-import pdf from "../files/Norden-Tenzin-Resume.pdf";
-import resumeIcon from "../assets/resume.svg";
-import githubIcon from "../assets/github.svg";
-import instagramIcon from "../assets/instagram_xray.svg";
-import emailIcon from "../assets/email.svg";
-import linkedinIcon from "../assets/linkedin_xray.svg";
 // components
 import NavBar from "../components/NavBar";
 
-const LandingPage = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
+export default function LaunchPage() {
   const [english, setEnglish] = useState("");
   const [morse, setMorse] = useState("");
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
+  // const [width, setWidth] = useState(0);
+  // const [height, setHeight] = useState(0);
   const [projectClass, setProjectClass] = useState("");
 
-  const contextRef = useRef<HTMLInputElement>(null);
   const draggableMorseTranslatorRef = useRef(null);
   useDraggable(draggableMorseTranslatorRef, {
     handle: ".title-bar",
@@ -76,14 +66,14 @@ const LandingPage = () => {
 
   return (
     <div className="wrapper">
-      {width >= 1500 ? (
+      {/* {width >= 1500 ? (
         <img src={qr} width="100" className="background-logo" />
       ) : (
         ""
-      )}
+      )} */}
       <div className="landing">
         {/* Intro */}
-        <div className="intro" id="home" style={{ height: height - 64 }}>
+        <div className="intro" id="home">
           <div className="header-container">
             <p className="header-logo">HEY, IM TENZIN NORDEN</p>
           </div>
@@ -250,7 +240,7 @@ const LandingPage = () => {
         </div>
 
         {/* DEMO code*/}
-        <div className="interactive" id="demo" style={{ height: height - 64 }}>
+        <div className="interactive" id="demo">
           <h1 className="header-title">Demo</h1>
           <div ref={draggableMorseTranslatorRef} className="window my-window">
             <div className="title-bar">
@@ -357,6 +347,4 @@ const LandingPage = () => {
       </div>
     </div>
   );
-};
-
-export default LandingPage;
+}

@@ -1,33 +1,4 @@
-$orange-color: rgb(255, 159, 111);
-$lorange-color: rgb(255, 234, 224);
-$lblue-color: #d6e8f4;
-$blue-color: #c1daee;
-
-$primary-color: rgb(255, 0, 0);
-$secondary-color: rgb(255, 233, 223);
-// $background-color: rgb(252, 242, 234);
-
-$sticky-links: rgb(255, 173, 173);
-$sticky-links-background-color: rgb(255, 159, 111);
-$sticky-text-color: white;
-
-$blue-card: #c1daee;
-$orange-card: #c1daee;
-
-$background-color: #f8f8f8;
-$background-color: white;
-$primary-color: #f87d09;
-$secondary-color: #004a55;
-$tertiary-color: #a7cdcc;
-// $background-color: #454545;
-
-$navbar-height: 64px;
-
-@import url("https://fonts.googleapis.com/css2?family=Georama:wght@100&family=Gidugu&family=Happy+Monkey&family=Londrina+Shadow&family=Potta+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=PT+Serif:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900;1000&display=swap");
+@import "./helper.scss";
 
 .wrapper::-webkit-scrollbar {
   all: unset !important;
@@ -323,7 +294,6 @@ $navbar-height: 64px;
         font-size: 2.5rem;
       }
       .info {
-        // width: 75%;
         font-size: 1.5em;
         margin-left: 2rem;
         margin-right: 2rem;

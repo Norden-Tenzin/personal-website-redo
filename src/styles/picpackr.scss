@@ -1,0 +1,70 @@
+@import "./helper.scss";
+
+.pp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .pp-title {
+    padding: 4rem 40px 0px 40px;
+    font-family: "Dm Sans";
+    font-weight: 800;
+    font-size: 7rem;
+  }
+  .pp-subtitle {
+    font-family: "Dm Sans";
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0px;
+  }
+  .pp-desc {
+  }
+  .pp-app-download {
+    width: 10rem;
+    margin-top: 40px;
+  }
+  .pp-img-card-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 4rem 40px 40px 40px;
+    .pp-img-card-item {
+      object-fit: contain;
+      overflow: hidden;
+      border-radius: 20px;
+      .pp-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .pp-img-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .pp-img-card-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .pp-title {
+      font-size: 5rem;
+    }
+    .pp-subtitle {
+      font-size: 1rem;
+    }
+  }
+  // @media screen and (min-width: 600px) {
+  //   .card_grid {
+  //     grid-template-columns: repeat(3, 1fr);
+  //   }
+  // }
+  // @media screen and (min-width: 1000px) {
+  //   .card_grid {
+  //     grid-template-columns: repeat(4, 1fr);
+  //   }
+  // }
+}
