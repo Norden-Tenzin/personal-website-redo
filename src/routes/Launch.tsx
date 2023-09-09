@@ -3,6 +3,7 @@ import { eToM, mToE } from "../helpers/morse";
 import { useDraggable } from "@neodrag/react";
 import { IoLogoLinkedin, IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
 import { SiMinutemailer } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 // css imports
 import "swiper/swiper.min.css";
 import "semantic-ui-css/semantic.min.css";
@@ -14,9 +15,8 @@ import NavBar from "../components/NavBar";
 export default function LaunchPage() {
   const [english, setEnglish] = useState("");
   const [morse, setMorse] = useState("");
-  // const [width, setWidth] = useState(0);
-  // const [height, setHeight] = useState(0);
   const [projectClass, setProjectClass] = useState("");
+  const navigate = useNavigate();
 
   const draggableMorseTranslatorRef = useRef(null);
   useDraggable(draggableMorseTranslatorRef, {
@@ -28,19 +28,6 @@ export default function LaunchPage() {
     handle: ".title-bar",
     bounds: "parent",
   });
-
-  // componentDidMount() {
-  //   this.updateWindowDimensions();
-  //   window.addEventListener("resize", this.updateWindowDimensions);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener("resize", this.updateWindowDimensions);
-  // }
-
-  // updateWindowDimensions() {
-  //   this.setState({ width: window.innerWidth, height: window.innerHeight });
-  // }
 
   const englishInput = (e: any) => {
     setEnglish("");
@@ -75,7 +62,7 @@ export default function LaunchPage() {
         {/* Intro */}
         <div className="intro" id="home">
           <div className="header-container">
-            <p className="header-logo">HEY, IM TENZIN NORDEN</p>
+            <p className="header-logo">HI! I'M TENZIN NORDEN</p>
           </div>
 
           <div className="para-wrapper">
@@ -83,7 +70,7 @@ export default function LaunchPage() {
               I'm a programmer, artist, gamer and an avid cook. A
               <span className="rutgers"> Rutgers </span>
               NB Alumni with a Bachelors of Science in Computer Science.
-              Interested in all facets of programming.
+              Interested in Front-End and iOS/MAC Development.
               <br />
               Currently residing in
               <br />
@@ -109,7 +96,10 @@ export default function LaunchPage() {
               <div className="item">
                 <a
                   className="link-header"
-                  href="https://github.com/Norden-Tenzin/IOS-ImageCompressionApp"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    navigate("/picpackr");
+                  }}
                 >
                   PicPackr
                 </a>
@@ -123,47 +113,32 @@ export default function LaunchPage() {
                   spin on.
                 </p>
               </div>
-              {/* LstMkr */}
+              {/* ACNH Villager Finder */}
               <div className="item">
                 <a
                   className="link-header"
-                  href="https://github.com/Norden-Tenzin/flutter_lstMkr"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    navigate("/acnh-vill-finder");
+                  }}
                 >
-                  LstMkr
+                  ACNH Vill Finder
                 </a>
-                <p className="info">Built Using: Dart, Flutter, Figma</p>
+                <p className="info">Built Using: Swift, SwiftUI, Figma</p>
                 <p className="info">
-                  I wanted an App that would let me track my weekly tasks like
-                  gym laundry etc. Im sure if I looked I could have found 20
-                  better alternatives built by much smarter people than me, but
-                  I wanted to give this Idea a shot. I used flutter for this as
-                  I was familar having built some simple apps using it already.
-                </p>
-              </div>
-              {/* Menu App */}
-              <div className="item">
-                <a
-                  className="link-header"
-                  href="https://github.com/Norden-Tenzin/menu-app"
-                >
-                  Menu App
-                </a>
-                <p className="info">
-                  Built Using: React, TypeScript, Vite, Sass, Firebase, Figma
-                </p>
-                <p className="info">
-                  I wanted to build a way for people to scan a qr code and order
-                  together as a table. While I could have built it as a mobile
-                  App I wanted it to be as accessible as possible, so I landed
-                  making a web app. While having built the core functionality I
-                  wish to build on top of this in the future to make a product.
+                  My Goal while making this App was to implement a tinder like
+                  interaction of card swiping. To keep the scope low I scrapped
+                  images of villagers from the popular game Animal Crossing
+                  using python instead of making a full blown tinder copy. Then
+                  I built the App using SwiftUI to give it a robust and
+                  enjoyable user experience.
                 </p>
               </div>
               {/* Ck3 DNA */}
               <div className="item">
                 <a
                   className="link-header"
-                  href="https://github.com/Norden-Tenzin/ck3-dna"
+                  href="https://norden-tenzin.github.io/ck3-dna/"
                 >
                   CK3 DNA
                 </a>
@@ -233,6 +208,42 @@ export default function LaunchPage() {
                   pygame to create UI for the projects. Overall, these projects
                   allowed me to gain valuable experience in the field of AI and
                   machine learning.
+                </p>
+              </div>
+              {/* LstMkr */}
+              <div className="item">
+                <a
+                  className="link-header"
+                  href="https://github.com/Norden-Tenzin/flutter_lstMkr"
+                >
+                  LstMkr
+                </a>
+                <p className="info">Built Using: Dart, Flutter, Figma</p>
+                <p className="info">
+                  I wanted an App that would let me track my weekly tasks like
+                  gym laundry etc. Im sure if I looked I could have found 20
+                  better alternatives built by much smarter people than me, but
+                  I wanted to give this Idea a shot. I used flutter for this as
+                  I was familar having built some simple apps using it already.
+                </p>
+              </div>
+              {/* Menu App */}
+              <div className="item">
+                <a
+                  className="link-header"
+                  href="https://github.com/Norden-Tenzin/menu-app"
+                >
+                  Menu App
+                </a>
+                <p className="info">
+                  Built Using: React, TypeScript, Vite, Sass, Firebase, Figma
+                </p>
+                <p className="info">
+                  I wanted to build a way for people to scan a qr code and order
+                  together as a table. While I could have built it as a mobile
+                  App I wanted it to be as accessible as possible, so I landed
+                  making a web app. While having built the core functionality I
+                  wish to build on top of this in the future to make a product.
                 </p>
               </div>
             </div>
@@ -316,7 +327,7 @@ export default function LaunchPage() {
         </div>
 
         <div className="footer" id="contact">
-          <span className="contact-header">Say Hi!!</span>
+          <span className="contact-header">Say HI!!</span>
           <div className="contact-email-container">
             <span className="contact-text">
               email me @ nordentenzinwork@gmail.com

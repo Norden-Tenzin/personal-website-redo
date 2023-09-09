@@ -35,7 +35,7 @@
 
 .navbar {
   height: $navbar-height;
-  max-width: 1080px;
+  max-width: 1280px;
   width: 100%;
   position: relative;
   z-index: 999;
@@ -87,7 +87,7 @@
 .landing {
   display: flex;
   flex-direction: column;
-  max-width: 1080px;
+  max-width: 1280px;
 }
 
 .intro {
@@ -145,7 +145,7 @@
   // }
 
   .header-container {
-    grid-column: 1/12;
+    grid-column: 1/13;
     grid-row: 1/2;
     .header-logo {
       font-size: 9rem;
@@ -159,34 +159,28 @@
       line-height: 8rem;
       cursor: default;
     }
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 930px) {
       .header-logo {
         font-size: 7rem;
         line-height: 6.1rem;
       }
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 750px) {
       .header-logo {
         font-size: 5rem;
         line-height: 4.5rem;
       }
     }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 550px) {
       .header-logo {
-        font-size: 4rem;
+        font-size: 3.5rem;
         line-height: 4rem;
       }
     }
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 420px) {
       .header-logo {
         font-size: 3rem;
         line-height: 2.5rem;
-      }
-    }
-    @media screen and (max-width: 430px) {
-      .header-logo {
-        font-size: 2.5rem;
-        line-height: 2rem;
       }
     }
   }

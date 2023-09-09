@@ -3,6 +3,7 @@ import "../styles/picpackr.scss";
 import appWht from "../assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 import { IoLogoLinkedin, IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
 import { SiMinutemailer } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 
 export default function PicPackrPage() {
   const imgs = [
@@ -11,11 +12,27 @@ export default function PicPackrPage() {
     "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/acnh%2Fframe3.png?alt=media&token=29228dca-fc58-4cb1-88f6-c4a8f6d28ec6",
     "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/acnh%2Fframe4.png?alt=media&token=6c7b9094-aa8f-4c27-bf52-d70a9a0eb5c7",
   ];
+  const navigate = useNavigate();
+
   return (
     <div className="pp-wrapper">
       <h1 className="pp-title">ACNH Villager Finder</h1>
       <p className="pp-subtitle">Fun way to find villagers for your Island</p>
-      <img className="pp-app-download" src={appWht} />
+      <div style={{ display: "flex", gap: "10px" }}>
+        <span className="pp-subtitle" style={{ paddingBottom: "15px" }}>
+          By
+        </span>
+        <a
+          className="pp-subtitle"
+          style={{ color: "#004a55", cursor: "pointer" }}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Tenzin Norden
+        </a>
+      </div>
+      {/* <img className="pp-app-download" style={{ margin: "0px" }} src={appWht} /> */}
       <div className="pp-img-card-grid">
         {imgs.map((img, index) => {
           return <Card img={img} key={index} />;

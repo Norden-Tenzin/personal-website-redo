@@ -3,6 +3,7 @@ import "../styles/picpackr.scss";
 import appWht from "../assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 import { IoLogoLinkedin, IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
 import { SiMinutemailer } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 
 export default function PicPackrPage() {
   const imgs = [
@@ -12,12 +13,35 @@ export default function PicPackrPage() {
     "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/picpackr%2Fframe4.png?alt=media&token=8faab151-25da-48be-ac43-3e1fab64ac50",
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="pp-wrapper">
       <h1 className="pp-title">PicPackr</h1>
-      <p className="pp-subtitle">Your go to image compression App</p>
+      <p className="pp-subtitle" style={{ paddingBottom: "10px" }}>
+        Your go to image compression App
+      </p>
+      <div style={{ display: "flex", gap: "10px" }}>
+        <span className="pp-subtitle" style={{ paddingBottom: "15px" }}>
+          By
+        </span>
+        <a
+          className="pp-subtitle"
+          style={{ color: "#004a55", cursor: "pointer" }}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Tenzin Norden
+        </a>
+      </div>
+
       <a href="https://apps.apple.com/app/id6450822867">
-        <img className="pp-app-download" src={appWht} />
+        <img
+          className="pp-app-download"
+          style={{ margin: "0px" }}
+          src={appWht}
+        />
       </a>
       <div className="pp-img-card-grid">
         {imgs.map((img, index) => {
