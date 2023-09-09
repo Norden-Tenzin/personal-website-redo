@@ -1,6 +1,6 @@
 import "../styles/picpackr.scss";
 // import appBlk from "../assets/picpackr/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg";
-import appWht from "../assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
+// import appWht from "../assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg";
 import { IoLogoLinkedin, IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
 import { SiMinutemailer } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
