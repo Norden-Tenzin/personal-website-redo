@@ -2,11 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Launch from "./routes/Launch.jsx";
+
 import PicPackr from "./routes/PicPackrPage.js";
 import PicPackrPrivacyPolicyPage from "./routes/PicPackrPrivacyPolicyPage.js";
 
 import ACNH from "./routes/ACNH-Vill-Finder.js";
 import ACNHPricacyPolicyPage from "./routes/ACNH-PrivacyPolicyPage.js";
+
+import LSTMKR from "./routes/LstMkr.js";
+import LSTMKRPPPage from "./routes/LstMkrPPPage.js";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/acnh-vill-finder/privacy_policy",
     element: <ACNHPricacyPolicyPage />,
+  },
+  {
+    path: "/lstmkr",
+    element: <LSTMKR />,
+  },
+  {
+    path: "/lstmkr/privacy_policy",
+    element: <LSTMKRPPPage />,
   },
 ]);
 

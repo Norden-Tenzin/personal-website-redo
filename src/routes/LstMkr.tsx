@@ -5,19 +5,21 @@ import { IoLogoLinkedin, IoLogoGithub, IoLogoInstagram } from "react-icons/io5";
 import { SiMinutemailer } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 
-export default function ACNHPage() {
+export default function LstMkrPPPage() {
   const imgs = [
-    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/acnh%2Fframe1.png?alt=media&token=206c4359-de6d-48c8-af14-d4f00e722e15",
-    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/acnh%2Fframe2.png?alt=media&token=a5ef8d3b-fdc8-42e3-a6a9-9f278098dc98",
-    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/acnh%2Fframe3.png?alt=media&token=29228dca-fc58-4cb1-88f6-c4a8f6d28ec6",
-    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/acnh%2Fframe4.png?alt=media&token=6c7b9094-aa8f-4c27-bf52-d70a9a0eb5c7",
+    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/lstmkr%2FFrame%2018.png?alt=media&token=5ec28bdd-02d9-4b1d-9ade-d29a010c32c0",
+    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/lstmkr%2FFrame%2019.png?alt=media&token=93a8f7dc-2f99-4038-808b-5b4b36882e8e",
+    "https://firebasestorage.googleapis.com/v0/b/personal-website-3e90d.appspot.com/o/lstmkr%2FFrame%2020.png?alt=media&token=40f8a16a-9473-4e27-95a8-fc3a1dcaef3a",
   ];
   const navigate = useNavigate();
 
   return (
     <div className="pp-wrapper">
-      <h1 className="pp-title">ACNH Villager Finder</h1>
-      <p className="pp-subtitle">Fun way to find villagers for your Island</p>
+      <h1 className="pp-title">LstMkr</h1>
+      <p className="pp-subtitle">
+        LstMkr is a straightforward and user-friendly app designed to help you
+        keep track of your lists and notes with ease
+      </p>
       <div style={{ display: "flex", gap: "10px" }}>
         <span className="pp-subtitle" style={{ paddingBottom: "15px" }}>
           By
