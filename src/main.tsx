@@ -12,6 +12,9 @@ import ACNHPricacyPolicyPage from "./routes/ACNH-PrivacyPolicyPage.js";
 import LSTMKR from "./routes/LstMkr.js";
 import LSTMKRPPPage from "./routes/LstMkrPPPage.js";
 
+import YOMIYOMI from "./routes/YomiYomi.js";
+import YOMIYOMIPPPage from "./routes/YomiYomiPrivacyPolicyPage.js";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +43,14 @@ const router = createBrowserRouter([
   {
     path: "/lstmkr/privacy_policy",
     element: <LSTMKRPPPage />,
+  },
+  {
+    path: "/yomiyomi",
+    element: <YOMIYOMI />,
+  },
+  {
+    path: "/yomiyomi/privacy_policy",
+    element: <YOMIYOMIPPPage />,
   },
 ]);
 
