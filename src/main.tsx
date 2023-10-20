@@ -15,6 +15,9 @@ import LSTMKRPPPage from "./routes/LstMkrPPPage.js";
 import YOMIYOMI from "./routes/YomiYomi.js";
 import YOMIYOMIPPPage from "./routes/YomiYomiPrivacyPolicyPage.js";
 
+import SKYSTATE from "./routes/SkyState.js";
+import SKYSTATEPPPage from "./routes/SkyStatePrivacyPolicyPage.js";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +54,14 @@ const router = createBrowserRouter([
   {
     path: "/yomiyomi/privacy_policy",
     element: <YOMIYOMIPPPage />,
+  },
+  {
+    path: "/skystate",
+    element: <SKYSTATE />,
+  },
+  {
+    path: "/skystate/privacy_policy",
+    element: <SKYSTATEPPPage />,
   },
 ]);
 
